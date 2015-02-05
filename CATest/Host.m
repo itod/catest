@@ -39,11 +39,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    [self setAnimations:nil];
-
     [self setLayer:[CALayer layer]];
     [self setWantsLayer:YES];
-    TDAssert(![self.layer.animationKeys count]);
     self.layer.geometryFlipped = YES;
     self.layer.autoresizingMask = kCALayerWidthSizable|kCALayerHeightSizable;
     self.layer.needsDisplayOnBoundsChange = YES;
@@ -98,7 +95,6 @@
     CGColorRelease(strokeColor);
     CGColorRelease(fillColor);
     
-    [self.layer setNeedsLayout];
     [self.layer setNeedsDisplay];
 }
 

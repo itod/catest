@@ -21,6 +21,7 @@
 //
 //
 - (id <CAAction>)actionForKey:(NSString *)key {
+    NSLog(@"%@", key);
     return nil;
 }
 //
